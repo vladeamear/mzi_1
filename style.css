@@ -1,0 +1,89 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    transition: .5s;
+}
+input[type = text],input[type = button], textarea{
+    border: 2px solid rgb(219, 219, 219);
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 1em;
+    outline: none;
+    resize: none;
+}
+input[type = button]:hover{
+    background-color: rgb(197, 197, 197);
+    padding-right: 10px;
+    padding-left: 10px;
+}
+textarea::-webkit-scrollbar{
+    width:0;
+}
+.task{
+    background-color: white;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+}
+.header{
+    margin-top: 0;
+}
+.bottomelement{
+    margin-bottom: 0;
+}
+.forradio{
+    display: flexbox;
+    flex-direction: row;
+}
+.beginend{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.beginend input[type = text]{
+    width: 40%;
+}
+
+input[type = radio]{
+    display: none;
+}
+input[type = radio]+label{
+    cursor: pointer;
+    background-color: rgb(219, 219, 219);
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+input[type = radio]+label:hover{
+    background-color: rgb(211, 243, 243);
+}
+input[type = radio]:checked+label{
+    background-color: aqua;
+}
+
+.osn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.osn input[type = text]{
+    width: 20px;
+}
+
+span{
+    color:grey;
+    font-size: .7em;
+}

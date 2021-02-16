@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простые числа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="task">
+        <p class="header">Генерация простого числа</p>
+        <hr noshade>
+        <p class="header">Выберите колличество разрядов</p>
+        <p class="forradio">
+            <input type="radio" name="firsttask" id="1" onclick="first(1);">
+            <label for="1">1</label>
+            <input type="radio" name="firsttask" id="2" onclick="first(2);">
+            <label for="2">2</label>
+            <input type="radio" name="firsttask" id="3" onclick="first(3);">
+            <label for="3">3</label>
+            <input type="radio" name="firsttask" id="4" onclick="first(4);">
+            <label for="4">4</label>
+        </p>
+        <p class="bottomelement">
+            <input type="text" name="" id="firstres" disabled>
+        </p>
+    </div>
+
+    <div class="task">
+        <p class="header">Поиск простого числа в интервале</p>
+        <p>
+            <input class="radiofor2" type="radio" name="secondtask" id="st1" onclick="switchMethod()" value="Resheto" checked>
+            <label for="st1">Решето Эратосфена</label>
+        </p>
+        <p>
+            <input class="radiofor2" type="radio" name="secondtask" id="st2" onclick="switchMethod()" value="neResheto">
+            <label for="st2">Малая теорема Ферма</label>
+        </p>
+        <hr noshade>
+
+        <div class="block" id="Resheto" style="display: block;">
+            <p>Установите граничные значения</p>
+            <p class="beginend">
+                <input type="text" id="begin1" placeholder="начало">
+                <input type="text" id="end1" placeholder="конец">
+            </p>
+            <p><input type="button" class="pointer" value="результат" onclick="second();"></p>
+            <p class="bottomelement">
+                <textarea id="secondres" cols="20" rows="10" disabled></textarea>
+            </p>
+        </div>
+
+        <div class="block" id="neResheto" style="display: none;">
+            <span>(результатом будут <br> ПСЕВДОПРОСТЫЕ числа, <br> низкая точность)</span>
+            <p>Установите граничные значения</p>
+            <p class="beginend">
+                <input type="text" id="begin2" placeholder="начало">
+                <input type="text" id="end2" placeholder="конец">
+            </p>
+            <p>Установите основания</p>
+            <p class="osn">
+                <input type="text" name='osn2'>
+                <input type="text" name='osn2'>
+                <input type="text" name='osn2'>
+                <input type="text" name='osn2'>
+                <input type="text" name='osn2'>
+            </p>
+            <p><input type="button" class="pointer" value="результат" onclick="second2();"></p>
+            <p class="bottomelement">
+                <textarea id="second2res" cols="20" rows="10" disabled></textarea>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="task">
+        <p class="header">Проверка числа на простоту</p>
+        <hr noshade>
+        <p>Введите число</p>
+        <input type="text" id="thirdIn" oninput="third();">
+        <p>Согласно решету Эратосфена число</p>
+        <input type="text" id="thirdEr" disabled>
+        <hr noshade>
+        <p>Надо ввести основания</p>
+        <p class="osn">
+            <input type="text" name='osn3' oninput="third();">
+            <input type="text" name='osn3' oninput="third();">
+            <input type="text" name='osn3' oninput="third();">
+            <input type="text" name='osn3' oninput="third();">
+            <input type="text" name='osn3' oninput="third();">
+        </p>
+        <p>Согласно малой теореме Ферма <span>(которая может нагло врать)</span> число</p>
+        <input class="bottomelement" type="text" id="thirdFr" disabled>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
